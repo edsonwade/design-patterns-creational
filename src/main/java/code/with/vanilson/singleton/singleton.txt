@@ -1,0 +1,5 @@
+->Garante que apenas uma unica instançia é criada.
+examples:
+Runtime
+Logger
+Spring beans implementation
