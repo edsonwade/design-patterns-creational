@@ -388,7 +388,7 @@ public class Main {
 ```
 
 
-## Diagrams of each Creational Patter
+### Diagrams of each Design type Creational Pattern
 
 ### Singleton Pattern
 ```mermaid
