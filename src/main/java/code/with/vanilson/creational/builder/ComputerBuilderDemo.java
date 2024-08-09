@@ -1,4 +1,4 @@
-package code.with.vanilson.builder;
+package code.with.vanilson.creational.builder;
 
 /**
  * ComputerBuilderDemo
@@ -16,7 +16,7 @@ public class ComputerBuilderDemo {
                 .setHasUsbc(true)
                 .setHasGigabiWifi(true);
 
-        Computer computer = builder.build();
+       Computer computer = builder.build();
         System.out.println(computer.getDiskSize() + " "
                 + computer.getRamSize() + " "
                 + computer.isHasUsbc() + " "

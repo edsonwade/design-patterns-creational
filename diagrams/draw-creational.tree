@@ -1,0 +1,126 @@
+--Singleton----
++-----------------+
+|    Singleton    |
++-----------------+
+| - instance: Singleton |
++-----------------+
+| + getInstance(): Singleton |
+| + showMessage(): void      |
++-----------------+
+
+
+--Builder --------------------------------
++-----------------+        +-----------------+
+|    Director     |        |      House      |
++-----------------+        +-----------------+
+| - builder: HouseBuilder  | - foundation: String |
++-----------------+        | - structure: String  |
+| + constructHouse(): House| - roof: String       |
++-----------------+        | - interior: String   |
+                           +-----------------+
+                                   ^
+                                   |
+                                   |
+                           +-----------------+
+                           |  HouseBuilder   |
+                           +-----------------+
+                           | + buildFoundation(): void |
+                           | + buildStructure(): void  |
+                           | + buildRoof(): void       |
+                           | + buildInterior(): void   |
+                           | + getHouse(): House       |
+                           +-----------------+
+                                   ^
+                                   |
+                                   |
+                           +-----------------+
+                           |ConcreteHouseBuilder|
+                           +-----------------+
+                           | - house: House  |
+                           +-----------------+
+                           | + buildFoundation(): void |
+                           | + buildStructure(): void  |
+                           | + buildRoof(): void       |
+                           | + buildInterior(): void   |
+                           | + getHouse(): House       |
+                           +-----------------+
+--Factory methods
+ +-----------------+        +-----------------+
+|    Creator      |        |    Product      |
++-----------------+        +-----------------+
+| + factoryMethod(): Product| + use(): void  |
+| + someOperation(): void   | + use(): void  |
++-----------------+        +-----------------+
+        ^
+        |
+        |
++-----------------+        +-----------------+
+|ConcreteCreatorA |        |ConcreteProductA |
++-----------------+        +-----------------+
+| + factoryMethod(): Product| + use(): void  |
++-----------------+        +-----------------+
+        ^
+        |
+        |
++-----------------+        +-----------------+
+|ConcreteCreatorB |        |ConcreteProductB |
++-----------------+        +-----------------+
+| + factoryMethod(): Product| + use(): void  |
++-----------------+        +-----------------+
+
+--Prototype Pattern
++-----------------+        +-----------------+
+|     Registry    |        |      Item       |
++-----------------+        +-----------------+
+| - items: Map<String, Item>| - title: String |
++-----------------+        | - price: double |
+| + createItem(type: String): Item | - url: String |
+| + loadItems(): void       | + clone(): Object |
++-----------------+        +-----------------+
+                                   ^
+                                   |
+                                   |
+                           +-----------------+
+                           |    Movie        |
+                           +-----------------+
+                           | - runtime: String |
+                           +-----------------+
+                           | + getRuntime(): String |
+                           | + setRuntime(runtime: String): void |
+                           +-----------------+
+                                   ^
+                                   |
+                                   |
+                           +-----------------+
+                           |     Book        |
+                           +-----------------+
+                           | - numberOfPages: int |
+                           +-----------------+
+                           | + getNumberOfPages(): int |
+                           | + setNumberOfPages(pages: int): void |
+                           +-----------------+
+--Abstract Factory Pattern
++-----------------+        +-----------------+
+|   GUIFactory    |        |     Button      |
++-----------------+        +-----------------+
+| + createButton(): Button | + paint(): void |
+| + createCheckbox(): Checkbox| + paint(): void |
++-----------------+        +-----------------+
+        ^
+        |
+        |
++-----------------+        +-----------------+
+| WindowsFactory  |        | WindowsButton   |
++-----------------+        +-----------------+
+| + createButton(): Button | + paint(): void |
+| + createCheckbox(): Checkbox| + paint(): void |
++-----------------+        +-----------------+
+        ^
+        |
+        |
++-----------------+        +-----------------+
+|   MacFactory    |        |    MacButton    |
++-----------------+        +-----------------+
+| + createButton(): Button | + paint(): void |
+| + createCheckbox(): Checkbox| + paint(): void |
++-----------------+        +-----------------+

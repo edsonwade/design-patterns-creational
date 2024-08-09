@@ -1,4 +1,4 @@
-package code.with.vanilson.singleton;
+package code.with.vanilson.creational.singleton;
 
 /**
  * Singleton
