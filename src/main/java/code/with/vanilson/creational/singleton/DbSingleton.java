@@ -1,4 +1,4 @@
-package code.with.vanilson.singleton;
+package code.with.vanilson.creational.singleton;
 
 import lombok.extern.slf4j.Slf4j;
 

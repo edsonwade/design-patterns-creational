@@ -1,4 +1,4 @@
-package code.with.vanilson.builder;
+package code.with.vanilson.creational.builder;
 
 import lombok.Getter;
 import lombok.Setter;
